@@ -772,7 +772,7 @@ color:red;}
 }
 .contact .contact-content .row{
     display: flex;
-    height: 65px;
+    height: 50%;
     align-items: center;
 }
 .contact .contact-content .row .info{
