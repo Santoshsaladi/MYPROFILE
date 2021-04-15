@@ -12,6 +12,46 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
         <link rel="shortcut icon" href="./assets/code.svg"/>
         <link rel="stylesheet" href="v1.css"/>
+        <style>
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: crimson;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
     </head>
 
     <body class="body">
@@ -31,13 +71,39 @@
     transition: all 0.3s ease;" class="navbar">
         <div class="max-width">
             <div href="#logo" class="logo"><a  href="#"><span></span></a></div>
+            <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">get more</button>
+  <div id="myDropdown" class="dropdown-content">   
             <ul class="menu">
-                <li><a href="#home" class="menu-btn">Home</a></li>
-                <li><a href="#about" class="menu-btn">About</a></li>
-                <li><a href="#skills" class="menu-btn">Skills</a></li>
-                <li><a href="#education" class="menu-btn">education</a></li>
-                <li><a href="#contact" class="menu-btn">Contact</a></li>
+                <li><a href="#home" >Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">education</a></li>
+                <li><a href="#contact" >Contact</a></li>
             </ul>
+                </div>
+            </div>
+            <script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
             <div class="menu-btn">
                 <i class="fas fa-bars"></i>
             </div>
