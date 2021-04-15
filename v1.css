@@ -754,7 +754,7 @@
 color : white;
 }
 .contact .contact-content .column{
-    width: calc(50% - 30px);
+    width: 100%;
 }
 .contact .contact-content .title{
 color:red;}
